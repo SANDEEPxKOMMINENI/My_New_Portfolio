@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       title: "URL Redirection Service",
       description: "A modern, secure URL shortening service using AWS serverless architecture.",
       tags: ["AWS", "React", "TypeScript", "Serverless"],
-      image: "/placeholder.svg",
+      image: "/images/projects/url-redirection.jpg",
       detailedDescription: "This modern URL shortener provides instant URL shortening with unique identifiers and secure redirection powered by AWS Lambda, DynamoDB, and API Gateway.",
       technologies: ["React", "TypeScript", "AWS Lambda", "DynamoDB", "API Gateway"],
       links: {
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       title: "San Vortex AI",
       description: "A modern ChatGPT clone with multi-model support and advanced features.",
       tags: ["AI", "React", "TypeScript", "Supabase"],
-      image: "/placeholder.svg",
+      image: "/images/projects/san-vortex-ai.jpg",
       detailedDescription: "A feature-rich ChatGPT clone supporting multiple AI models via OpenRouter, user authentication, chat organization, and responsive design with theme customization.",
       technologies: ["React", "TypeScript", "Supabase", "AI Integration", "OpenRouter"],
       links: {
@@ -166,7 +166,7 @@ const ProjectsSection = () => {
       </div>
       
       <p className="text-muted-foreground mb-10 max-w-3xl">
-        Showcasing {projects.length}+ projects leveraging various technologies including AI, machine learning, 
+        Showcasing <span className="font-bold text-primary">20+</span> projects leveraging various technologies including AI, machine learning, 
         cloud architecture, and web development. Below are highlights from my portfolio.
       </p>
 
@@ -184,7 +184,18 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
+              
               <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="text-xs px-2 py-1 bg-secondary/50 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                 {project.links.github && (
                   <Button variant="outline" size="sm" asChild className="gap-1">
                     <a href={project.links.github} target="_blank" rel="noopener noreferrer">
@@ -202,15 +213,7 @@ const ProjectsSection = () => {
                   </Button>
                 )}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-secondary/50 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              
               <Button 
                 variant="secondary" 
                 size="sm" 

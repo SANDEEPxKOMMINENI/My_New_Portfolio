@@ -7,6 +7,7 @@ interface Certification {
   organization: string;
   date: string;
   validPeriod?: string;
+  credentialId?: string;
   verifyLink?: string;
   image: string;
 }
@@ -20,6 +21,14 @@ const CertificationsSection = () => {
       validPeriod: "Valid: May 2024 – May 2027",
       verifyLink: "#",
       image: "/placeholder.svg"
+    },
+    {
+      title: "Oracle Certified AI Foundations Associate",
+      organization: "Oracle",
+      date: "Feb 2025",
+      credentialId: "317851681OCI24AICFA",
+      verifyLink: "#",
+      image: "/images/certifications/oracle_ai_foundations.png"
     },
     {
       title: "Salesforce Certified AI Associate",
@@ -59,6 +68,9 @@ const CertificationsSection = () => {
                 <span className="text-primary font-medium">{cert.date}</span>
                 {cert.validPeriod && (
                   <span className="text-muted-foreground">{cert.validPeriod}</span>
+                )}
+                {cert.credentialId && (
+                  <span className="text-muted-foreground">Credential ID: {cert.credentialId}</span>
                 )}
               </div>
               
