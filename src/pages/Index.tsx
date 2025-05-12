@@ -1,12 +1,51 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeroSection from "@/sections/HeroSection";
+import AboutSection from "@/sections/AboutSection";
+import SkillsSection from "@/sections/SkillsSection";
+import ServicesSection from "@/sections/ServicesSection";
+import ExperienceSection from "@/sections/ExperienceSection";
+import ProjectsSection from "@/sections/ProjectsSection";
+import CertificationsSection from "@/sections/CertificationsSection";
+import ResumeSection from "@/sections/ResumeSection";
+import ContactSection from "@/sections/ContactSection";
+
+// Update the title of the page
+document.title = "Sandeep Kommineni | AI Engineer";
 
 const Index = () => {
+  // Scroll to section if hash is present in URL
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ServicesSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <CertificationsSection />
+        <ResumeSection />
+        <ContactSection />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
