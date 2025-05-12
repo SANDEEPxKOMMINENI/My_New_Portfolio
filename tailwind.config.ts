@@ -69,22 +69,18 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
+			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0', opacity: '0' },
+					to: { height: 'var(--radix-accordion-content-height)', opacity: '1' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)', opacity: '1' },
+					to: { height: '0', opacity: '0' }
 				},
 				'fade-in-up': {
 					'0%': {
@@ -97,20 +93,12 @@ export default {
 					}
 				},
 				'fade-in': {
-					'0%': {
-						opacity: '0'
-					},
-					'100%': {
-						opacity: '1'
-					}
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				},
 				'fade-out': {
-					'0%': {
-						opacity: '1'
-					},
-					'100%': {
-						opacity: '0'
-					}
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				},
 				'type-writer': {
 					'0%, 100%': { width: '0%' },
@@ -121,12 +109,12 @@ export default {
 					'50%': { borderColor: 'inherit' }
 				},
 				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0)'
-					},
-					'50%': {
-						transform: 'translateY(-5px)'
-					}
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'shine': {
+					'0%': { left: '-75%' },
+					'100%': { left: '125%' }
 				}
 			},
 			animation: {
@@ -137,7 +125,8 @@ export default {
 				'fade-out': 'fade-out 0.3s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'type-writer': 'type-writer 4s steps(40, end) infinite',
-				'blink-caret': 'blink-caret 0.75s step-end infinite'
+				'blink-caret': 'blink-caret 0.75s step-end infinite',
+				'shine': 'shine 3s infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

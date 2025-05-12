@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { MapPin, Mail, Phone, Globe, Send } from "lucide-react";
+import { MapPin, Mail, Phone, ExternalLink, Send, Github, Linkedin, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionContainer from "@/components/SectionContainer";
 
@@ -51,8 +51,8 @@ const ContactSection = () => {
   return (
     <SectionContainer id="contact" className="bg-muted/30">
       <div className="flex items-center space-x-2 mb-10">
-        <Mail size={22} className="text-primary" />
-        <h2 className="section-title">Contact</h2>
+        <MessageSquare size={22} className="text-primary" />
+        <h2 className="section-title">Contact Me</h2>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12">
@@ -62,7 +62,7 @@ const ContactSection = () => {
             Feel free to reach out if you're looking for an AI developer, have a question, or just want to connect.
           </p>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="flex items-center">
               <MapPin size={20} className="text-primary mr-4" />
               <span>Guntur, Andhra Pradesh, India</span>
@@ -81,16 +81,15 @@ const ContactSection = () => {
             </div>
             
             <div className="flex items-start">
-              <Globe size={20} className="text-primary mr-4 mt-1" />
-              <div className="space-y-2">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="block hover:text-primary transition-colors">
+              <ExternalLink size={20} className="text-primary mr-4 mt-1" />
+              <div className="space-y-3">
+                <a href="#" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
+                  <Github size={18} />
                   GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="block hover:text-primary transition-colors">
+                <a href="#" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
+                  <Linkedin size={18} />
                   LinkedIn
-                </a>
-                <a href="https://portfolio.com" target="_blank" rel="noreferrer" className="block hover:text-primary transition-colors">
-                  Portfolio
                 </a>
               </div>
             </div>

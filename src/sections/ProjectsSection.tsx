@@ -9,7 +9,7 @@ interface Project {
   description: string;
   tags: string[];
   image: string;
-  detailedDescription: string;
+  detailedDescription?: string;
   technologies: string[];
   links: {
     demo?: string;
@@ -22,38 +22,34 @@ const ProjectsSection = () => {
 
   const projects: Project[] = [
     {
-      title: "AnimeRadar",
-      description: "AI-based anime recommender system using NLP and image recognition",
-      tags: ["NLP", "Computer Vision", "Recommender System"],
+      title: "Sustainable Living Education Platform",
+      description: "A platform promoting eco-friendly living through education & community features.",
+      tags: ["Web App", "Education", "Sustainability"],
       image: "/placeholder.svg",
-      detailedDescription: "AnimeRadar is a sophisticated recommendation engine that combines natural language processing and computer vision to analyze anime content and provide personalized recommendations. The system processes both visual elements and text descriptions to understand themes, styles, and narrative patterns.",
-      technologies: ["PyTorch", "TensorFlow", "FastAPI", "React", "AWS"],
+      technologies: ["MySQL", "React", "Node.js", "Express"],
       links: {
         demo: "#",
         github: "#"
       }
     },
     {
-      title: "SanVortex AI Chat",
-      description: "Custom LLM-based chatbot with domain-specific fine-tuning",
-      tags: ["LLM", "Fine-tuning", "Conversational AI"],
+      title: "Anime Rador",
+      description: "Intelligent anime recommendation engine with personalized discovery.",
+      tags: ["AI", "Recommender System", "Web App"],
       image: "/placeholder.svg",
-      detailedDescription: "SanVortex AI Chat is an advanced conversational agent built on top of large language models with custom fine-tuning for specific domains. The system features context-aware responses, memory of conversation history, and integration capabilities with external knowledge bases.",
-      technologies: ["Hugging Face", "PyTorch", "Next.js", "Docker", "Redis"],
+      technologies: ["React", "Node.js", "Machine Learning", "API Integration"],
       links: {
         demo: "#",
         github: "#"
       }
     },
     {
-      title: "AI-LinguaSync",
-      description: "Real-time multilingual translator using Whisper and SpeechT5",
-      tags: ["Speech Recognition", "Translation", "Real-time"],
+      title: "Amazon ML Challenge 2024",
+      description: "Built a model with 90% accuracy in entity value extraction using ML/NLP.",
+      tags: ["Machine Learning", "NLP", "Data Analysis"],
       image: "/placeholder.svg",
-      detailedDescription: "AI-LinguaSync is a real-time speech translation system that can translate between multiple languages on-the-fly. Built with OpenAI's Whisper for speech recognition and fine-tuned SpeechT5 models for high-quality translation and voice synthesis, it maintains speaker characteristics across languages.",
-      technologies: ["Whisper", "SpeechT5", "WebRTC", "TensorFlow", "Firebase"],
+      technologies: ["Python", "Machine Learning", "NLP", "Data Analysis"],
       links: {
-        demo: "#",
         github: "#"
       }
     }
@@ -63,7 +59,7 @@ const ProjectsSection = () => {
     <SectionContainer id="projects">
       <div className="flex items-center space-x-2 mb-10">
         <Code size={22} className="text-primary" />
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title">Featured Projects</h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,12 +79,30 @@ const ProjectsSection = () => {
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-muted-foreground mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag, i) => (
                   <span key={i} className="text-xs px-2 py-1 bg-secondary/50 rounded-full">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {project.links.github && (
+                  <Button variant="outline" size="sm" asChild className="gap-1">
+                    <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                      <Github size={16} />
+                      GitHub
+                    </a>
+                  </Button>
+                )}
+                {project.links.demo && (
+                  <Button size="sm" asChild className="gap-1">
+                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
@@ -119,7 +133,7 @@ const ProjectsSection = () => {
               </div>
               
               <div className="space-y-4">
-                <p>{selectedProject.detailedDescription}</p>
+                <p>{selectedProject.detailedDescription || selectedProject.description}</p>
                 
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Technologies</h4>

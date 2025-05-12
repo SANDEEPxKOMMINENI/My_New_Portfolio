@@ -119,4 +119,73 @@
   .custom-scrollbar {
     @apply scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-transparent hover:scrollbar-thumb-primary/50;
   }
+  
+  /* Shine text effect */
+  .shine-text {
+    @apply relative inline-block;
+    background-image: linear-gradient(to right, hsl(var(--foreground)), hsl(var(--foreground)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      hsl(var(--primary)/30%) 50%,
+      transparent 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+  }
 }
+
+@keyframes type-writer {
+  0%, 100% { width: 0% }
+  30%, 70% { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: inherit }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+

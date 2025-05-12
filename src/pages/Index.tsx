@@ -11,6 +11,9 @@ import ProjectsSection from "@/sections/ProjectsSection";
 import CertificationsSection from "@/sections/CertificationsSection";
 import ResumeSection from "@/sections/ResumeSection";
 import ContactSection from "@/sections/ContactSection";
+import EducationSection from "@/sections/EducationSection";
+import TestimonialsSection from "@/sections/TestimonialsSection";
+import HobbiesSection from "@/sections/HobbiesSection";
 
 // Update the title of the page
 document.title = "Sandeep Kommineni | AI Engineer";
@@ -36,11 +39,14 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <EducationSection />
         <SkillsSection />
         <ServicesSection />
         <ExperienceSection />
         <ProjectsSection />
         <CertificationsSection />
+        <HobbiesSection />
+        <TestimonialsSection />
         <ResumeSection />
         <ContactSection />
       </main>

@@ -36,16 +36,20 @@ const HeroSection = () => {
               <span>AI Engineer</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-foreground">
-              Crafting the Future <br />of <span className="text-primary">AI</span>.
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-foreground mb-4">
+              <span className="shine-text">Sandeep Kommineni</span>
             </h1>
             
-            <h2 className="text-xl sm:text-2xl text-muted-foreground mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+              Crafting the Future <br />of <span className="text-primary">AI</span>.
+            </h2>
+            
+            <h3 className="text-xl sm:text-2xl text-muted-foreground mt-4">
               AI Engineer | Full-Stack AI Developer | <br className="sm:hidden" />
               <span className="text-foreground font-medium">
                 <TypeWriter texts={specialties} />
               </span> Enthusiast
-            </h2>
+            </h3>
             
             <p className="text-muted-foreground max-w-lg">
               Building intelligent systems that solve real-world problems with cutting-edge AI technology.
