@@ -66,8 +66,7 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <div 
             key={index}
-            className="glass-card overflow-hidden group cursor-pointer transition-all hover:shadow-lg"
-            onClick={() => setSelectedProject(project)}
+            className="glass-card overflow-hidden group transition-all hover:shadow-lg"
           >
             <div className="h-48 bg-muted overflow-hidden">
               <img 
@@ -77,16 +76,7 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-secondary/50 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-2">
                 {project.links.github && (
                   <Button variant="outline" size="sm" asChild className="gap-1">
                     <a href={project.links.github} target="_blank" rel="noopener noreferrer">
@@ -104,6 +94,23 @@ const ProjectsSection = () => {
                   </Button>
                 )}
               </div>
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="text-xs px-2 py-1 bg-secondary/50 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Button 
+                variant="secondary" 
+                size="sm" 
+                className="w-full mt-2"
+                onClick={() => setSelectedProject(project)}
+              >
+                View Details
+              </Button>
             </div>
           </div>
         ))}

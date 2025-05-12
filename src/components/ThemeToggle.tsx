@@ -27,17 +27,14 @@ const ThemeToggle = () => {
   return (
     <button
       aria-label="Toggle dark mode"
-      className="p-2 rounded-full bg-secondary dark:bg-secondary/30 text-secondary-foreground dark:text-secondary-foreground transition-colors hover:bg-secondary/80 dark:hover:bg-secondary/50 relative overflow-hidden"
+      className="p-2 rounded-full bg-secondary dark:bg-secondary/30 text-secondary-foreground dark:text-secondary-foreground transition-colors hover:bg-secondary/80 dark:hover:bg-secondary/50"
       onClick={() => setIsDark(!isDark)}
     >
-      <div className="relative z-10">
-        {isDark ? (
-          <Sun size={18} className="transition-all" />
-        ) : (
-          <Moon size={18} className="transition-all" />
-        )}
-      </div>
-      <span className={`absolute inset-0 bg-primary/20 transform transition-transform duration-300 ${isDark ? 'translate-x-full' : 'translate-x-0'}`}></span>
+      {isDark ? (
+        <Sun size={18} className="transition-all" />
+      ) : (
+        <Moon size={18} className="transition-all" />
+      )}
     </button>
   );
 };
