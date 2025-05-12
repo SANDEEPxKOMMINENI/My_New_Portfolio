@@ -1,5 +1,5 @@
 
-import { Heart, Code, Github, Languages, GameController } from "lucide-react";
+import { Heart, Code, Github, Languages, Gamepad2 } from "lucide-react";
 import SectionContainer from "@/components/SectionContainer";
 
 interface Hobby {
@@ -21,7 +21,7 @@ const HobbiesSection = () => {
       description: "Contributions to OSS"
     },
     {
-      icon: <GameController size={24} className="text-primary" />,
+      icon: <Gamepad2 size={24} className="text-primary" />,
       title: "Chess",
       description: "Strategic thinking"
     },
