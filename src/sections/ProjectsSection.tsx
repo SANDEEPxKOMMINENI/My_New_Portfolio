@@ -1,8 +1,9 @@
 
 import { useState } from "react";
-import { Code, X, ExternalLink, Github } from "lucide-react";
+import { Code, X, ExternalLink, Github, Eye, Image } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionContainer from "@/components/SectionContainer";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { 
   Pagination, 
   PaginationContent, 
@@ -35,7 +36,7 @@ const ProjectsSection = () => {
       title: "URL Redirection Service",
       description: "A modern, secure URL shortening service using AWS serverless architecture.",
       tags: ["AWS", "React", "TypeScript", "Serverless"],
-      image: "/images/projects/url-redirection.jpg",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format",
       detailedDescription: "This modern URL shortener provides instant URL shortening with unique identifiers and secure redirection powered by AWS Lambda, DynamoDB, and API Gateway.",
       technologies: ["React", "TypeScript", "AWS Lambda", "DynamoDB", "API Gateway"],
       links: {
@@ -46,7 +47,7 @@ const ProjectsSection = () => {
       title: "San Vortex AI",
       description: "A modern ChatGPT clone with multi-model support and advanced features.",
       tags: ["AI", "React", "TypeScript", "Supabase"],
-      image: "/images/projects/san-vortex-ai.jpg",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format",
       detailedDescription: "A feature-rich ChatGPT clone supporting multiple AI models via OpenRouter, user authentication, chat organization, and responsive design with theme customization.",
       technologies: ["React", "TypeScript", "Supabase", "AI Integration", "OpenRouter"],
       links: {
@@ -57,7 +58,7 @@ const ProjectsSection = () => {
       title: "IIT-Guwahati AIML Challenge",
       description: "Email time-slot optimization using neural networks and focal loss.",
       tags: ["Machine Learning", "Neural Networks", "Data Analysis"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format",
       detailedDescription: "A machine learning project that predicts optimal email sending times across 28 possible slots to maximize open rates, utilizing neural networks with focal loss to handle class imbalance.",
       technologies: ["Python", "Machine Learning", "Neural Networks", "Data Analysis"],
       links: {
@@ -68,7 +69,7 @@ const ProjectsSection = () => {
       title: "AI-LinguaSync",
       description: "AI-powered real-time translation platform with speaker recognition.",
       tags: ["AI", "Translation", "Speech Processing"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format",
       detailedDescription: "A powerful translation platform offering real-time voice translation across multiple languages, high-quality text-to-speech output, and speaker recognition capabilities.",
       technologies: ["AI", "Natural Language Processing", "Speech Recognition", "Real-time Processing"],
       links: {
@@ -79,7 +80,7 @@ const ProjectsSection = () => {
       title: "LinkedIn Auto-Applier",
       description: "Automated job application tool for LinkedIn positions.",
       tags: ["Automation", "Web Scraping", "Productivity"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format",
       technologies: ["Python", "Selenium", "Automation"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/LinkedIn-Applier",
@@ -89,7 +90,7 @@ const ProjectsSection = () => {
       title: "Doc-Conv",
       description: "Document conversion utility for transforming between various formats.",
       tags: ["Utility", "Document Processing"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format",
       technologies: ["Python", "Document Processing"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/Doc-Conv",
@@ -99,7 +100,7 @@ const ProjectsSection = () => {
       title: "MoveLogic Form",
       description: "Dynamic form system for logistics and moving services.",
       tags: ["Forms", "UI/UX", "Web App"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format",
       technologies: ["React", "Form Management"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/movelogic-form",
@@ -109,7 +110,7 @@ const ProjectsSection = () => {
       title: "AskDocs AI",
       description: "AI-powered document question answering system.",
       tags: ["AI", "NLP", "Document Processing"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format",
       technologies: ["Python", "NLP", "AI Models"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/askdocs-ai",
@@ -119,7 +120,7 @@ const ProjectsSection = () => {
       title: "Anime Rador",
       description: "Intelligent anime recommendation engine with personalized discovery.",
       tags: ["AI", "Recommender System", "Web App"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format",
       technologies: ["React", "Node.js", "Machine Learning", "API Integration"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/AnimeRador",
@@ -129,7 +130,7 @@ const ProjectsSection = () => {
       title: "Amazon ML Challenge 2024",
       description: "Entity value extraction model achieving 90% accuracy using ML/NLP.",
       tags: ["Machine Learning", "NLP", "Data Analysis"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format",
       technologies: ["Python", "Machine Learning", "NLP", "Data Analysis"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/amazon_ml_2024-challenge",
@@ -139,7 +140,7 @@ const ProjectsSection = () => {
       title: "Sustainable Living Education",
       description: "A platform promoting eco-friendly living through education & community features.",
       tags: ["Web App", "Education", "Sustainability"],
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format",
       technologies: ["React", "Node.js", "MySQL", "Express"],
       links: {
         github: "https://github.com/SANDEEPxKOMMINENI/Sustainable-Living-Education",
@@ -176,12 +177,25 @@ const ProjectsSection = () => {
             key={index}
             className="glass-card overflow-hidden group transition-all hover:shadow-lg flex flex-col"
           >
-            <div className="h-48 bg-muted overflow-hidden">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-              />
+            <div className="relative h-48 overflow-hidden">
+              <AspectRatio ratio={16/9}>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                />
+              </AspectRatio>
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <Button 
+                  variant="secondary" 
+                  size="sm" 
+                  className="gap-1"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <Eye size={16} />
+                  Preview
+                </Button>
+              </div>
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -195,7 +209,7 @@ const ProjectsSection = () => {
                 ))}
               </div>
               
-              <div className="flex flex-wrap gap-2 mb-4 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto mb-4">
                 {project.links.github && (
                   <Button variant="outline" size="sm" asChild className="gap-1">
                     <a href={project.links.github} target="_blank" rel="noopener noreferrer">
@@ -217,7 +231,7 @@ const ProjectsSection = () => {
               <Button 
                 variant="secondary" 
                 size="sm" 
-                className="w-full mt-2"
+                className="w-full"
                 onClick={() => setSelectedProject(project)}
               >
                 View Details
@@ -262,7 +276,7 @@ const ProjectsSection = () => {
       {/* Project Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-background border border-border max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-lg animate-fade-in">
+          <div className="bg-background border border-border max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-lg animate-fade-in">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
@@ -274,16 +288,18 @@ const ProjectsSection = () => {
                 </button>
               </div>
               
-              <div className="mb-6 h-64 bg-muted rounded-lg overflow-hidden">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title} 
-                  className="w-full h-full object-cover" 
-                />
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title} 
+                    className="w-full h-full object-cover" 
+                  />
+                </AspectRatio>
               </div>
               
               <div className="space-y-4">
-                <p>{selectedProject.detailedDescription || selectedProject.description}</p>
+                <p className="text-lg">{selectedProject.detailedDescription || selectedProject.description}</p>
                 
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Technologies</h4>
