@@ -5,7 +5,7 @@ import './index.css'
 import { initEmailJS } from './lib/emailjs.ts'
 
 // Initialize EmailJS with your user ID
-// Replace 'YOUR_USER_ID' with your actual EmailJS user ID
-initEmailJS('YOUR_USER_ID')
+// Replace 'YOUR_ACTUAL_USER_ID' with your actual EmailJS user ID
+initEmailJS('YOUR_ACTUAL_USER_ID')
 
 createRoot(document.getElementById("root")!).render(<App />);

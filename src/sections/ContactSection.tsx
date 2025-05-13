@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { MapPin, Mail, Phone, ExternalLink, Send, Github, Linkedin, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,13 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from 'emailjs-com';
+import { sendEmail } from '@/lib/emailjs';
 import SectionContainer from "@/components/SectionContainer";
 
 // EmailJS configuration
 const EMAILJS_SERVICE_ID = "default_service"; // Replace with your actual service ID
 const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your actual template ID
-const EMAILJS_USER_ID = "YOUR_USER_ID"; // Replace with your actual user ID
+const EMAILJS_USER_ID = "YOUR_ACTUAL_USER_ID"; // Replace with your actual user ID
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -91,8 +90,6 @@ const ContactSection = () => {
     
     try {
       // The EmailJS template should be configured to send to all three email addresses
-      // Either by setting them all as "To Email" in the template
-      // Or by using template variables and CC/BCC fields
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -102,12 +99,16 @@ const ContactSection = () => {
         to_email_3: "2200031970cser@gmail.com",
       };
       
-      await emailjs.send(
+      const result = await sendEmail(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams,
         EMAILJS_USER_ID
       );
+      
+      if (!result.success) {
+        throw new Error("Failed to send message");
+      }
       
       console.log("Message sent successfully!");
       
