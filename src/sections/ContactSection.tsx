@@ -9,9 +9,9 @@ import { sendEmail } from '@/lib/emailjs';
 import SectionContainer from "@/components/SectionContainer";
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = "default_service"; // Replace with your actual service ID
+const EMAILJS_SERVICE_ID = "service_ezxa8w9"; // Updated with actual service ID
 const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your actual template ID
-const EMAILJS_USER_ID = "YOUR_ACTUAL_USER_ID"; // Replace with your actual user ID
+const EMAILJS_USER_ID = "service_ezxa8w9"; // Updated with service ID as shown in the image
 
 const ContactSection = () => {
   const { toast } = useToast();
