@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,6 +12,7 @@ import ResumeSection from "@/sections/ResumeSection";
 import ContactSection from "@/sections/ContactSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
 import HobbiesSection from "@/sections/HobbiesSection";
+import ServicesSection from "@/sections/ServicesSection";
 
 const Index = () => {
   // Update the title of the page - moved inside component
@@ -41,6 +41,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ServicesSection />
         <ExperienceSection />
         <ProjectsSection />
         <CertificationsSection />
