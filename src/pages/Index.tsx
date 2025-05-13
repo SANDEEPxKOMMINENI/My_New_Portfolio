@@ -14,10 +14,12 @@ import ContactSection from "@/sections/ContactSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
 import HobbiesSection from "@/sections/HobbiesSection";
 
-// Update the title of the page
-document.title = "Sandeep Kommineni | AI Engineer";
-
 const Index = () => {
+  // Update the title of the page - moved inside component
+  useEffect(() => {
+    document.title = "Sandeep Kommineni | AI Engineer";
+  }, []);
+  
   // Scroll to section if hash is present in URL
   useEffect(() => {
     if (window.location.hash) {
