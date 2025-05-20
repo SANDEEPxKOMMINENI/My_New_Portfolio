@@ -26,15 +26,14 @@ const ContactInfo = () => {
           <Phone size={20} className="text-primary mr-4" />
           <span>+91-9573456001</span>
         </div>
-        
-        <div className="flex items-start">
+          <div className="flex items-start">
           <ExternalLink size={20} className="text-primary mr-4 mt-1" />
           <div className="space-y-3">
-            <a href="#" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
+            <a href="https://github.com/SANDEEPxKOMMINENI" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
               <Github size={18} />
               GitHub
             </a>
-            <a href="#" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
+            <a href="https://www.linkedin.com/in/sandeep-kommineni-334037259/" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors gap-2">
               <Linkedin size={18} />
               LinkedIn
             </a>

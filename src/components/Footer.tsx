@@ -13,24 +13,29 @@ const Footer = () => {
               © {currentYear} Sandeep Kommineni. All rights reserved.
             </p>
           </div>
-          
-          <div className="flex space-x-4">
+            <div className="flex space-x-4">
             <a 
-              href="#" 
+              href="https://github.com/SANDEEPxKOMMINENI" 
+              target="_blank"
+              rel="noreferrer"
               className="p-2 text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/sandeep-kommineni-334037259/" 
+              target="_blank"
+              rel="noreferrer"
               className="p-2 text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
             </a>
             <a 
-              href="#" 
+              href="https://twitter.com/SANDEEPKOMMINE1" 
+              target="_blank"
+              rel="noreferrer"
               className="p-2 text-muted-foreground hover:text-primary transition-colors"
               aria-label="Twitter"
             >
