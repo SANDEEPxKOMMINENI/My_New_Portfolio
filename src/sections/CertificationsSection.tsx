@@ -14,8 +14,15 @@ interface Certification {
   image: string;
 }
 
-const CertificationsSection = () => {
-  const certifications: Certification[] = [
+const CertificationsSection = () => {  const certifications: Certification[] = [    {
+      title: "GitHub Foundations",
+      organization: "GitHub",
+      date: "2025",
+      validPeriod: "Valid: 2025 – 2028",
+      credentialId: "",
+      verifyLink: "#",
+      image: "/lovable-uploads/github_foundations_image.jpg"
+    },
     {
       title: "AWS Cloud Practitioner",
       organization: "Amazon Web Services",

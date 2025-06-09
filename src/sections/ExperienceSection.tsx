@@ -10,28 +10,32 @@ interface ExperienceItem {
   description: string;
 }
 
-const ExperienceSection = () => {
-  const experiences: ExperienceItem[] = [
+const ExperienceSection = () => {  const experiences: ExperienceItem[] = [
     {
       icon: <Brain size={18} className="text-primary" />,
-      role: "Full-Stack AI Developer Intern",
-      company: "Isoft Technologies",
-      period: "2025–Present",
-      description: "Building end-to-end AI solutions integrating large language models with web applications. Developed an intelligent document processing system that extracts key information from unstructured text."
+      role: "AI/ML Engineer",
+      company: "Dyotta AI Agents Company, Bengaluru, Karnataka, India",
+      period: "June 2025–Present",
+      description: "Built AI-integrated SaaS platforms using Python, LangChain, MongoDB for intelligent workflows. Developed LLM pipelines with Transformers, Hugging Face for contextual automation. Engineered React.js, Node.js, REST APIs for real-time AI features in web applications."
     },
     {
+      icon: <Brain size={18} className="text-primary" />,
+      role: "Full-Stack AI Developer",
+      company: "Isoft Technologies, Auckland, New Zealand",
+      period: "March 2025–June 2025",
+      description: "Built AI-driven applications leveraging LLMs, Generative AI, and NLP techniques for advanced automation. Optimized model inference pipelines, reducing latency by 15% to enhance performance. Developed end-to-end solutions integrating AI-powered automation to improve workflow efficiency."
+    },    {
       icon: <Building size={18} className="text-primary" />,
-      role: "AI-ML Intern",
-      company: "Google for Developers",
-      period: "2025",
-      description: "Contributed to open-source AI projects and participated in model fine-tuning workshops. Implemented multimodal AI features for community tools and documentation systems."
-    },
-    {
+      role: "Academic Internship (Virtual) - AI & ML",
+      company: "EduSkills Foundation® (backed by Google for Developers)",
+      period: "Jan 2025 - Mar 2025",
+      description: "Successfully completed a 10-week AI-ML Virtual Internship program backed by Google for Developers and EduSkills. Worked on real-world machine learning use cases, including model development, evaluation, and deployment. Applied theoretical AI concepts in a practical setting to solve challenges and build scalable solutions."
+    },    {
       icon: <Cloud size={18} className="text-primary" />,
-      role: "Cloud Engineer Intern",
-      company: "AWS Academy",
-      period: "2024",
-      description: "Designed and deployed scalable cloud infrastructure for ML workloads. Created automated CI/CD pipelines for model training and deployment, reducing deployment time by 40%."
+      role: "Academic Internship (Virtual) - Cloud Computing",
+      company: "All India Council for Technical Education (AICTE) (backed by AWS Academy)",
+      period: "Jan 2024 - Mar 2024",
+      description: "Completed a 10-week hands-on Cloud Virtual Internship supported by AWS Academy through EduSkills. Gained practical experience in cloud computing concepts, architecture, and deployment strategies. Developed and deployed cloud-native applications and services, enhancing expertise in AWS, Azure, Google Cloud, and Oracle services."
     }
   ];
 
