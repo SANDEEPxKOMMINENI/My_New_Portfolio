@@ -7,9 +7,12 @@ const AboutSection = () => {
     <SectionContainer id="about">
       <div className="flex flex-col md:flex-row gap-10 items-center">
         <div className="w-full md:w-1/3">
-          <div className="relative mx-auto w-48 h-48 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full flex items-center justify-center">
-            <div className="absolute inset-1 rounded-full bg-gradient-to-r from-primary to-accent opacity-20"></div>
-            <div className="text-6xl font-bold text-primary">SK</div>
+          <div className="relative mx-auto w-48 h-48 rounded-full overflow-hidden shadow-lg">
+            <img 
+              src="/lovable-uploads/sandeep_new_professional.jpg" 
+              alt="Sandeep Kommineni - AI Engineer" 
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
         

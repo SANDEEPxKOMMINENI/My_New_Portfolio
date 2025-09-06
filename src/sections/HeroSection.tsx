@@ -29,7 +29,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
               <BrainCircuit size={16} />
@@ -62,6 +62,16 @@ const HeroSection = () => {
               <Button variant="outline" size="lg" asChild>
                 <a href="#contact">Hire Me</a>
               </Button>
+            </div>
+          </div>
+          
+          <div className="hidden lg:block">
+            <div className="relative mx-auto w-80 h-80 rounded-2xl overflow-hidden shadow-lg animate-fade-in-up animation-delay-200">
+              <img 
+                src="/lovable-uploads/sandeep_new_professional.jpg" 
+                alt="Sandeep Kommineni - AI Engineer" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
